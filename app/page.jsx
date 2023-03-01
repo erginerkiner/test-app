@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 import { useState, useEffect } from "react"
-import Movie from "./movie"
+import Movie from "../components/movie"
 
 export default function Home() {
 
