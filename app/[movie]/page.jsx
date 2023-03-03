@@ -1,7 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
 import Image from "next/image";
-import Head from "next/head";
 import Link from "next/link";
 
 export default function MovieDetail({ params }){
@@ -21,24 +20,8 @@ export default function MovieDetail({ params }){
             
             const res = await fetch(`https://api.themoviedb.org/3/movie/${movie}?api_key=${process.env.NEXT_PUBLIC_API_KEY}`)
             const details = await res.json();            
-            setDetail(details);
-            console.log(details)
-        
-    }
-
-/*     const fetchDetail = async () => {
-        try {
-        const res = await fetch(`https://api.themoviedb.org/3/movie/${movie}?api_key=${process.env.NEXT_PUBLIC_API_KEY}`)
-        const details = await res.json();            
-        setDetail(details);
-    } catch(error) { console.log(error)}
-} */
-    
-
-/*    useEffect(() =>{
-    console.log(detail)
-   },[detail]);  */
-
+            setDetail(details);  
+    };
 
     return(
 
