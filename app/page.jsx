@@ -15,7 +15,6 @@ export default function Home() {
   const fetchToprated = async() => {
     const data = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.NEXT_PUBLIC_API_KEY}`)
     const movies = await data.json()
-    console.log(movies)
     setToprated(movies.results);
 
 }

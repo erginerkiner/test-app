@@ -3,8 +3,14 @@ import { useState, useEffect } from "react"
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MovieDetail({ params }){
+async function getProduct(id) {
+  const res = await fetch(`https://.../api/products/${id}`);
+  return res.json();
+}
 
+  
+
+export default function MovieDetail({ params }){
 
     const [detail, setDetail] = useState({});
 
@@ -13,7 +19,7 @@ export default function MovieDetail({ params }){
   },[]);
 
     const { movie }  = params
-    const imagePath = `https://image.tmdb.org/t/p/original`
+    const imagePath = 'https://image.tmdb.org/t/p/original'
 
     
     const fetchDetail = async () => {
@@ -38,7 +44,7 @@ export default function MovieDetail({ params }){
                 <h2 className="text-xs inline-block  bg-green-600 rounded py-1 px-3 w-fit mx-auto">{detail.status}</h2>
                 <Image
                     className="rounded bg-gradient-to-t from-gray-200 to-transparent p-1 my-12 w-full"
-                    src={imagePath + detail.backdrop_path}
+                    src={imagePath+detail.backdrop_path}
                     alt={"Movie Pic"}
                     width={1000}
                     height={720} />

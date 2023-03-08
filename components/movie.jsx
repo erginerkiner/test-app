@@ -7,7 +7,7 @@ export default function Movie({title, id, poster_path, release_date}){
     return(
         <div className=" h-auto text-center bg-gradient-to-t from-gray-100 to-transparent rounded shadow">            
             <Link href={`/${id}`}>
-                <Image className="rounded shadow p-1" src={imagePath + poster_path} width={800} height={400} alt={title} />
+                <Image className="rounded shadow p-1" src={imagePath + poster_path} width={800} height={400} alt={title} title={title} />
             </Link>
             <h1 className="p-4 text-lg font-bold">{title}</h1>
             <h3 className="font-semibold">{release_date}</h3>
