@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) test project bootstrapped with [`create
 
 ## Getting Started
 
-First, run the development server:
+To run the development server:
 
 ```bash
 npm run dev
@@ -12,3 +12,4 @@ yarn dev
 pnpm dev
 ```
 
+then you can see the app on [localhost:3000](http://localhost:3000/)
