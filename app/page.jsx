@@ -29,7 +29,8 @@ export default function Home() {
             id={movie.id}
             title={movie.title}
             poster_path={movie.poster_path}
-            release_date={movie.release_date}/>  
+            release_date={movie.release_date}
+            vote_average={movie.vote_average}/>  
           ))}
       </div>
     </main>
