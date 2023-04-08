@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Navbar(){
 
     return(
-        <nav className="bg-gradient-to-b from-transparent to-neutral-500 p-4 shadow">
+        <nav className="bg-slate-50 p-4 shadow-xl flex justify-center">
             <div>
                 <h1 className="text-xl font-bold">
                     <Link href={"/"} title="Homepage">
